@@ -14,6 +14,26 @@ This organization contains various open source projects including:
 - Sample applications and examples
 - Community-driven projects
 
+## GitHub Action
+
+This repository can be used as a reusable GitHub Action in your workflows. 
+
+### Usage
+
+```yaml
+- uses: pros-com/.github@main
+  with:
+    message: 'Custom message for the action'
+```
+
+### Inputs
+
+- `message` (optional): A custom message to display. Default: "Running PROS organization action"
+
+### Outputs
+
+- `result`: The result of the action execution
+
 ## Legal Information
 
 All rights, trademarks, and intellectual property associated with the projects in this organization belong to PROS Inc. Please refer to individual project licenses for specific usage terms and conditions.

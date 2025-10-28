@@ -1,0 +1,27 @@
+name: 'PROS Organization Action'
+description: 'A reusable GitHub Action for PROS Inc organization repositories'
+author: 'PROS Inc'
+
+branding:
+  icon: 'package'
+  color: 'blue'
+
+inputs:
+  message:
+    description: 'Optional message to display'
+    required: false
+    default: 'Running PROS organization action'
+
+outputs:
+  result:
+    description: 'Result of the action execution'
+    value: ${{ steps.main.outputs.result }}
+
+runs:
+  using: 'composite'
+  steps:
+    - id: main
+      shell: bash
+      run: |
+        echo "::notice::${{ inputs.message }}"
+        echo "result=success" >> $GITHUB_OUTPUT
